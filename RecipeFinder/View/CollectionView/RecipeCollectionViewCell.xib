@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="LeV-92-ttz" customClass="RecipeCollectionViewCell" customModule="RecipeFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="207" height="304"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="207" height="304"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-dD-dKK">
+                        <rect key="frame" x="5" y="5" width="197" height="294"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Da-mL-CBJ">
+                        <rect key="frame" x="5" y="5" width="197" height="294"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipe-cutlery" translatesAutoresizingMaskIntoConstraints="NO" id="W8T-an-w4C">
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="197"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Yummy Food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aL-j8-sSY">
+                                <rect key="frame" x="5" y="205" width="187" height="14.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4aL-j8-sSY" secondAttribute="trailing" constant="5" id="5Jf-4L-0GE"/>
+                            <constraint firstItem="W8T-an-w4C" firstAttribute="height" secondItem="8Da-mL-CBJ" secondAttribute="width" id="AkC-vy-97L"/>
+                            <constraint firstItem="W8T-an-w4C" firstAttribute="leading" secondItem="8Da-mL-CBJ" secondAttribute="leading" id="Olt-qa-E9z"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4aL-j8-sSY" secondAttribute="bottom" constant="2" id="QyM-9a-g7I"/>
+                            <constraint firstItem="4aL-j8-sSY" firstAttribute="leading" secondItem="8Da-mL-CBJ" secondAttribute="leading" constant="5" id="SGF-Ei-bPA"/>
+                            <constraint firstItem="W8T-an-w4C" firstAttribute="top" secondItem="8Da-mL-CBJ" secondAttribute="top" id="mt1-Hr-6J7"/>
+                            <constraint firstAttribute="trailing" secondItem="W8T-an-w4C" secondAttribute="trailing" id="wrM-Fd-Xcc"/>
+                            <constraint firstItem="4aL-j8-sSY" firstAttribute="top" secondItem="W8T-an-w4C" secondAttribute="bottom" constant="8" id="ydg-ai-9jT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="eQ4-Ma-UHO"/>
+            <constraints>
+                <constraint firstItem="lnN-dD-dKK" firstAttribute="top" secondItem="LeV-92-ttz" secondAttribute="top" constant="5" id="0if-ud-IuP"/>
+                <constraint firstItem="8Da-mL-CBJ" firstAttribute="top" secondItem="LeV-92-ttz" secondAttribute="top" multiplier="2" constant="5" id="1eI-nU-ioB"/>
+                <constraint firstAttribute="trailing" secondItem="lnN-dD-dKK" secondAttribute="trailing" constant="5" id="64y-RI-BWW"/>
+                <constraint firstItem="lnN-dD-dKK" firstAttribute="leading" secondItem="LeV-92-ttz" secondAttribute="leading" constant="5" id="JaB-1N-kkQ"/>
+                <constraint firstAttribute="bottom" secondItem="8Da-mL-CBJ" secondAttribute="bottom" constant="5" id="Npl-vp-Crl"/>
+                <constraint firstAttribute="trailing" secondItem="8Da-mL-CBJ" secondAttribute="trailing" constant="5" id="R6M-ji-Wjg"/>
+                <constraint firstItem="8Da-mL-CBJ" firstAttribute="leading" secondItem="LeV-92-ttz" secondAttribute="leading" constant="5" id="VkG-jU-AHD"/>
+                <constraint firstAttribute="bottom" secondItem="lnN-dD-dKK" secondAttribute="bottom" constant="5" id="jUP-oU-GHy"/>
+            </constraints>
+            <size key="customSize" width="207" height="304"/>
+            <connections>
+                <outlet property="containerView" destination="8Da-mL-CBJ" id="J3o-il-Ky1"/>
+                <outlet property="recipeNameLabel" destination="4aL-j8-sSY" id="6iY-Nq-H6v"/>
+                <outlet property="shadowView" destination="lnN-dD-dKK" id="ZhY-FO-SlI"/>
+                <outlet property="thumbNailImageView" destination="W8T-an-w4C" id="Sle-fP-iUx"/>
+            </connections>
+            <point key="canvasLocation" x="231.53846153846152" y="78.909952606635073"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="recipe-cutlery" width="404" height="404"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

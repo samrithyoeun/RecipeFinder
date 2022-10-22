@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UZU-Ed-L3R">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="JUq-s0-kba">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="UZU-Ed-L3R" customClass="MainViewController" customModule="RecipeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogY-V7-jOq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x63-3M-Z8S">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="MBK-Zu-iFe" customClass="RecipeCollectionViewFlowLayout" customModule="RecipeFinder" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W7R-Wo-k8W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W7R-Wo-k8W" firstAttribute="trailing" secondItem="x63-3M-Z8S" secondAttribute="trailing" id="ZfS-aM-Ibj"/>
+                            <constraint firstAttribute="bottom" secondItem="x63-3M-Z8S" secondAttribute="bottom" id="aFg-WV-R2S"/>
+                            <constraint firstItem="x63-3M-Z8S" firstAttribute="leading" secondItem="ogY-V7-jOq" secondAttribute="leading" id="bHD-hS-0Pb"/>
+                            <constraint firstItem="x63-3M-Z8S" firstAttribute="top" secondItem="W7R-Wo-k8W" secondAttribute="top" id="cXu-z5-wPC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7yy-1a-DeX"/>
+                    <connections>
+                        <outlet property="collectionView" destination="x63-3M-Z8S" id="dmi-HU-Lb8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ph-xM-XRb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.76923076923072" y="3.5545023696682461"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="ahH-VG-ZyU">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailViewController" id="bqI-jG-SX2" customClass="RecipeDetailViewController" customModule="RecipeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e66-WG-Qus">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEl-25-UIW">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-0h-A3L" customClass="VideoPlayerView" customModule="RecipeFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bTC-C8-zUP">
+                                        <rect key="frame" x="8" y="410" width="374" height="641"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7W-OK-YAN">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-GN-a5S">
+                                                <rect key="frame" x="0.0" y="40.333333333333314" width="374" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuJ-Mm-paa">
+                                                <rect key="frame" x="0.0" y="80.666666666666686" width="374" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
+
+
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJi-cN-7E7">
+                                                <rect key="frame" x="0.0" y="350.66666666666663" width="374" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="35N-Wn-tBB">
+                                                <rect key="frame" x="0.0" y="391" width="374" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
+
+
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AcV-0h-A3L" secondAttribute="trailing" id="PLO-4S-eLg"/>
+                                    <constraint firstItem="AcV-0h-A3L" firstAttribute="height" secondItem="ZEl-25-UIW" secondAttribute="width" id="X6G-d8-VIM"/>
+                                    <constraint firstItem="bTC-C8-zUP" firstAttribute="top" secondItem="AcV-0h-A3L" secondAttribute="bottom" constant="20" id="ZYl-Ge-KNP"/>
+                                    <constraint firstItem="AcV-0h-A3L" firstAttribute="leading" secondItem="ZEl-25-UIW" secondAttribute="leading" id="dfg-NF-51x"/>
+                                    <constraint firstAttribute="bottom" secondItem="bTC-C8-zUP" secondAttribute="bottom" constant="40" id="kOw-Ic-rIe"/>
+                                    <constraint firstItem="AcV-0h-A3L" firstAttribute="top" secondItem="ZEl-25-UIW" secondAttribute="top" id="mFv-1x-Fcx"/>
+                                    <constraint firstAttribute="trailing" secondItem="bTC-C8-zUP" secondAttribute="trailing" constant="8" id="r8h-jG-71Y"/>
+                                    <constraint firstItem="AcV-0h-A3L" firstAttribute="width" secondItem="ZEl-25-UIW" secondAttribute="width" id="rl7-qL-fPv"/>
+                                    <constraint firstItem="bTC-C8-zUP" firstAttribute="leading" secondItem="ZEl-25-UIW" secondAttribute="leading" constant="8" id="xY7-Oi-t4J"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zE6-A3-INf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZEl-25-UIW" firstAttribute="trailing" secondItem="zE6-A3-INf" secondAttribute="trailing" id="H0r-px-qAd"/>
+                            <constraint firstItem="ZEl-25-UIW" firstAttribute="width" secondItem="e66-WG-Qus" secondAttribute="width" id="HSv-wn-Bno"/>
+                            <constraint firstItem="ZEl-25-UIW" firstAttribute="height" secondItem="e66-WG-Qus" secondAttribute="height" id="Jle-ug-4zd"/>
+                            <constraint firstItem="ZEl-25-UIW" firstAttribute="leading" secondItem="zE6-A3-INf" secondAttribute="leading" id="daU-g9-EVZ"/>
+                            <constraint firstItem="ZEl-25-UIW" firstAttribute="top" secondItem="e66-WG-Qus" secondAttribute="top" id="vPp-qW-7o2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="35N-Wn-tBB" id="DwY-oC-ddU"/>
+                        <outlet property="ingredientTextView" destination="VuJ-Mm-paa" id="EBT-Ic-AXH"/>
+                        <outlet property="playerView" destination="AcV-0h-A3L" id="Kab-TU-a5B"/>
+                        <outlet property="recipeTitleLabel" destination="N7W-OK-YAN" id="Ybf-4w-rMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSd-Uo-Eb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758.4615384615383" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

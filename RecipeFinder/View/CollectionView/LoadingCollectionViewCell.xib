@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadingCollectionViewCell" id="ZNO-3W-a9u" customClass="LoadingCollectionViewCell" customModule="RecipeFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="373" height="103"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-Kx-UyU">
+                        <rect key="frame" x="0.0" y="0.0" width="373" height="103"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="DkG-kt-rqT"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qZK-Kx-UyU" secondAttribute="trailing" id="6an-Yc-Lu5"/>
+                <constraint firstItem="qZK-Kx-UyU" firstAttribute="leading" secondItem="ZNO-3W-a9u" secondAttribute="leading" id="QJb-0w-dff"/>
+                <constraint firstItem="qZK-Kx-UyU" firstAttribute="top" secondItem="ZNO-3W-a9u" secondAttribute="top" id="YKm-kR-aEl"/>
+                <constraint firstAttribute="bottom" secondItem="qZK-Kx-UyU" secondAttribute="bottom" id="h1J-sd-T4h"/>
+            </constraints>
+            <size key="customSize" width="373" height="103"/>
+            <connections>
+                <outlet property="indicator" destination="qZK-Kx-UyU" id="IPg-cQ-24k"/>
+            </connections>
+            <point key="canvasLocation" x="379.23076923076923" y="7.4644549763033172"/>
+        </collectionViewCell>
+    </objects>
+</document>
